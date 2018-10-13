@@ -1,0 +1,478 @@
+
+$color--white: #FFFFFF
+$color--black: #000000
+$color--light-grey: #E6E6E6
+$color--grey: #CCCCCC
+$color--dark-grey: #7B7B7B
+$color--primary: #5aacee
+$color--primary: #2196f3
+$color--secondary: darken(#2196f3, 10)
+$box-shadow: inset 0px 2px 2px rgba(0,0,0,.3)
+
+.paginationActive
+  a
+    background-color: #2196f3 !important
+    color: #fff !important
+.paginationjs
+  .paginationjs-pages
+    li
+      border: none
+      > a
+        background-color: transparent
+        margin-left: 10px
+        margin-right: 10px
+        height: 25px
+        width: 25px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 3px !important
+        border: 1px solid transparent
+        box-sizing: border-box
+        &:hover
+          border: 1px solid #2196f3 !important
+.paginationjs-prev, .paginationjs-next
+  a
+    font-size: 18px !important
+    color: #2196f3 !important
+.paginationjs .paginationjs-pages li:last-child
+  border: none
+.pagination
+  display: flex
+  align-items: center
+  justify-content: center
+.header__top-menu
+  .activeMenu
+    color: #2196f3
+
+
+.control
+  position: relative
+  padding-left: 30px
+  margin-bottom: 15px
+  cursor: pointer
+  height: 20px
+  .controlTitle
+    padding-top: 4px
+
+  // Hide default browser input
+  input
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+
+// Custom control
+
+.control__indicator
+  position: absolute
+  top: 2px
+  left: 0
+  height: 20px
+  width: 20px
+  background: $color--white
+  box-shadow: $box-shadow
+  border-radius: 2px
+
+  // Hover and focus
+  .control:hover input ~ &,
+  .control input:focus ~ &
+    background: $color--grey
+
+  // Checked
+  .control input:checked ~ &
+    background: $color--primary
+
+  // Hover when checked
+  .control:hover input:not([disabled]):checked ~ &,
+  .control input:checked:focus ~ &
+    background: $color--secondary
+
+  // Hide default browser input
+  .control input:disabled ~ &
+    background: $color--light-grey
+    opacity: 0.6
+    pointer-events: none
+
+  &:after
+    content: ''
+    position: absolute
+    display: none // Hide check
+
+    .control input:checked ~ &
+      display: block // Show check
+  .control--radio
+    left: 7px
+    top: 7px
+    height: 6px
+    width: 6px
+    border-radius: 50%
+    background: $color--white
+
+.control--radio .control__indicator
+  border-radius: 50%
+  &:after
+    left: 7px
+    top: 7px
+    height: 6px
+    width: 6px
+    border-radius: 50%
+    background: #fff
+
+.filter__range-wrap
+  input,  textarea
+    border-radius: 3px
+    background: white
+    border: none
+    box-shadow: $box-shadow
+    padding: 10px 10px 8px
+    line-height: 0.8
+.catalog__title
+  padding: 0 15px
+  min-height: 40px
+.catalogStock
+  box-shadow: 0 2px 1px rgba(0,0,0,.3)
+  display: flex
+  position: absolute
+  top: 20px
+  height: 40px
+  justify-content: space-between
+  width: 80%
+  background-color: #e8bf00
+  color: white
+  border-radius: 0px 3px 3px 0
+  > div
+    padding: 10px 15px
+    font-size: 18px
+  &Left
+    padding: 0 10px !important
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    min-width: 55%
+    border-right: dashed 2px white
+    div
+      width: 29px
+      height: 24px
+      margin-right: 10px
+      background: url(.././images/sprite.png) no-repeat
+      -webkit-background-size: 100px
+      background-size: 256px
+      background-position: -47px -187px
+.trashBodyContainer
+  padding: 0 40px
+  font-size: 18px
+.trashBobyListHeader
+  margin-bottom: 20px
+  font-weight: bold
+  padding: 5px 0px !important
+  display: flex
+  border-bottom: 1px solid #8d8f8f
+  .trashProductName
+    align-items: center !important
+    padding: 5px 0px !important
+.trashProduct
+  border-bottom: 1px solid #8d8f8f
+  display: flex
+  padding: 20px 0px 20px
+.trashProduct
+  > div
+    display: flex
+    align-items: center
+    justify-content: center
+    box-sizing: border-box
+    font-weight: bold
+  &Image
+    text-align: center
+    width: 13.5%
+    img
+      width: 240px
+      height: 240px
+      background-color: #000
+  &Name
+    text-align: center
+    width: 33%
+    padding: 0 30px
+    flex-direction: column
+    align-items: flex-start !important
+    &Title
+      font-size: 20px
+      margin-bottom: 40px
+    .catalog__article
+      font-weight: 400
+      span
+        color: #4f4f4f
+  &Price
+    text-align: center
+    display: flex
+    flex-direction: column
+    width: 14%
+  &Amount
+    text-align: center
+    width: 14%
+    input
+      margin: 0
+    a
+      width: 40px
+      text-decoration: none
+      font-size: 30px
+      height: 30px
+  &Sum
+    text-align: center
+    width: 14%
+  &Delete
+    text-align: center
+    width: 11.5%
+.trashProductPrice
+  .catalogStock
+    width: auto
+    min-width: 150px
+    justify-content: space-evenly
+    top: 0
+    margin-bottom: 25px
+    box-shadow: none
+    position: relative
+    &Left
+      max-width: 30px
+      min-width: auto
+      width: 100%
+      padding: 0 !important
+      &:after
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        border-radius: 50%
+        left: -20px
+        content: ''
+        width: 30px
+        height: 30px
+        background-color: #e6e9e9
+    .trashDiscountPrice
+      width: auto
+.trashProductAmountMinus
+  display: flex
+  flex-direction: column
+  padding-right: 10px
+  box-sizing: border-box
+  div
+    height: 50%
+    &:last-child
+      border-top: 1px solid #8d8f8f
+    &:first-child
+      border-bottom: 1px solid #8d8f8f
+.trashProductAmountPlus
+  display: flex
+  flex-direction: row
+  padding-left: 10px
+  flex-wrap: wrap
+  box-sizing: border-box
+  div
+    box-sizing: border-box
+    height: 50%
+    width: 50%
+    border: 1px solid #8d8f8f
+    &:nth-child(1)
+      border-left: none
+      border-top: none
+    &:nth-child(2)
+      border-right: none
+      border-top: none
+    &:nth-child(3)
+      border-left: none
+      border-bottom: none
+    &:nth-child(4)
+      border-right: none
+      border-bottom: none
+.trashProductAmountPlus.active
+  div
+    border-color: #4f5050
+.trashProductAmountPlus.delete
+  width: 40px
+  height: 30px
+  transform: rotate(45deg)
+  div
+    border-color: #f32157
+.finishPriceBox
+  margin-bottom: 50px
+  display: flex
+  font-weight: bold
+  align-items: flex-end
+  flex-direction: column
+  font-size: 20px
+  .finishPrice
+    display: flex
+    margin: 25px 180px 25px 0
+    z-index: 1
+    div
+      &:last-child
+        margin-left: 15px
+.finishPriceButtons
+  display: flex
+  a
+    border-radius: 3px
+    width: 300px
+    margin-left: 20px
+    text-align: center
+    font-weight: bold
+    box-sizing: border-box
+    padding: 8px
+    color: #ffffff
+    background-color: #5aacee
+    text-decoration: none
+    border: 1px solid #5aacee
+    transition: background-color 0.15s ease-in-out
+    &:hover
+      color: #5aacee
+      background-color: transparent
+.trashFormCont
+  display: flex
+  justify-content: space-between
+  border-bottom: 1px solid #8d8f8f
+  padding-bottom: 20px
+  flex-wrap: wrap
+  > div
+    margin-top: 30px
+    margin-bottom: 0
+    flex-basis: 540px
+.trashFormName
+  display: flex
+  flex-direction: column
+  label
+    &:last-child
+      margin-bottom: 0
+  &Title
+    margin-bottom: 15px
+    font-size: 18px
+    font-weight: bold
+  .control
+    height: auto
+.inputGroup
+  width: 100% !important
+  display: flex
+  justify-content: space-between
+  padding: 10px 0
+  align-items: center
+  margin-bottom: 0
+  label
+    position: relative
+    &:after
+      content: '*'
+      position: absolute
+      top: 0
+      right: -10px
+      color: #f32157
+  input
+    max-width: 450px
+    margin-right: 0
+    width: 100%
+.trashFormTitle
+  text-align: center
+  font-size: 30px
+  font-weight: bold
+.trashFormDop
+  display: flex
+  justify-content: space-between
+  .filter__range-wrap
+    width: auto !important
+    &:first-child
+      margin-right: 40px
+  input
+    max-width: 140px
+    width: 100%
+    margin-left: 20px
+.trashFormDopThree
+  input
+    width: 80px
+  .filter__range-wrap
+    margin-right: 20px !important
+    &:last-child
+      margin-right: 0 !important
+.trashFormComment
+  textarea
+    width: 540px
+    height: 230px
+    box-sizing: border-box
+    vertical-align: top
+    padding: 10px 15px
+    text-align: left
+    margin: 0
+    font-family: sans-serif
+.trashFormWay
+  border-bottom: 1px solid #8d8f8f
+  padding: 40px 0 30px
+  .trashFormNameTitle
+    margin-top: 30px
+    margin-bottom: 20px
+  .trashFormContainer
+    display: flex
+    justify-content: space-between
+    > div
+      width: calc(25% - 30px)
+.trashFromWayBodyTitle
+  max-height: 86px
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  border-bottom: 1px solid #d0d0d0
+  .control--radio
+    display: flex
+    align-items: center
+    height: auto
+    .text
+      max-width: 280px
+      width: 100%
+      text-align: center
+      span
+        color: #8d8f8f
+        font-size: 16px
+    .control__indicator
+      transform: translateY(-50%)
+      top: 50%
+.trashFromWayBodyPrice
+  font-weight: bold
+  font-size: 24px
+  text-align: center
+  display: flex
+  justify-content: center
+  padding: 15px 0
+  div
+    max-width: 220px
+    span
+      font-size: 16px
+      font-weight: normal
+.trashFormPay
+  border-bottom: 0
+  .trashFormContainer
+    display: flex
+    justify-content: flex-start
+    > div
+      justify-content: flex-start
+      width: auto
+      border-bottom: 0 !important
+    .trashFromWayBodyTitle
+      min-width: 220px
+    .formPayText
+      margin-left: 40px
+.fz18
+  font-size: 18px !important
+.finishPriceBottom, .finishPricePay
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0 15px
+  height: 60px
+  font-size: 20px
+  font-weight: bold
+  background-color: #d0e1ee
+  div
+    &:first-child
+      margin-right: 10px
+.finishPricePay
+  background-color: transparent
+  padding: 40px 0 0
+  height: auto
+
+
+
+@import "media"

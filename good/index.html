@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sanvaro</title>
+  </head>
+  <body>
+    <div class="modal-call" style="display: none;" id="hidden-content">
+      <form action="">
+        <input type="text" placeholder="ВАШЕ ІМ’Я">
+        <input type="text" placeholder="ВАШ ТЕЛЕФОН">
+        <input type="submit" value="ЗАМОВИТИ ДЗВІНОК">
+      </form>
+    </div>
+    <header>
+      <div class="header__top max_width">
+        <div class="header__top-menu">
+          <div class="toggle-wrap">
+            <div class="toggle-button"><span class="sandwich"><span class="sw-topper"> </span><span class="sw-bottom"> </span><span class="sw-footer"> </span></span></div>
+          </div>
+          <nav><a href="#">О компании</a>
+            <a href="#">Доставка и оплата</a>
+            <a href="#" class="activeMenu">Спецпредложения</a>
+            <a href="#">Гарантии</a>
+            <a href="#">Установка</a>
+            <a href="#">Контакты</a></nav>
+        </div>
+        <div class="header__work"><i class="header_clock"></i><span>Пн-Пт: 09.00 - 20.00</span><span>Сб: 10.00 - 20.00</span><span>Вскр: выходной</span></div>
+        <div class="header__login"><i class="header_login"></i><span>Личный кабинет</span></div>
+      </div>
+      <div class="header__body-wrap">
+        <div class="header__body max_width">
+          <div class="header__logo">
+            <a href="trash.html"><img src="images/logo.png" alt=""></a>
+          </div>
+          <div class="header__search">
+            <div class="header__search-in">
+              <input type="text">
+              <button><i class="search"></i></button>
+            </div>
+          </div><a class="header__phone" href="tel:+74952155789"><i class="phone"></i><span>+7 (495) 215-57-89</span></a>
+          <div class="header__cart"><i class="cart"></i><span>Корзина</span></div>
+        </div>
+      </div>
+    </header>
+    <div class="content max_width">
+      <div class="sidebar">
+        <div class="sidebar__menu">
+          <ul>
+            <li><a href="#">
+                <div class="sidebar__icon"><i class="sidebar_1"></i></div><span>Мебель для ванной</span></a></li>
+            <li><a href="#">
+                <div class="sidebar__icon"><i class="sidebar_2"></i></div><span>Ванны</span></a></li>
+            <li><a href="#">
+                <div class="sidebar__icon"><i class="sidebar_3"></i></div><span>Смесители</span></a>
+              <ul>
+                <li><a href="#">Для ванны</a></li>
+                <li><a href="#">Для душа</a></li>
+                <li><a href="#">Для раковины</a></li>
+                <li><a href="#">Кухонные смесители</a></li>
+                <li><a href="#">Универсальные смесители</a></li>
+                <li><a href="#">Для биде</a></li>
+                <li><a href="#">Для писсуара</a></li>
+                <li><a href="#">Душевые лейки</a></li>
+                <li><a href="#">Душевые стойки</a></li>
+              </ul>
+            </li>
+            <li><a href="#">
+                <div class="sidebar__icon"><i class="sidebar_4"></i></div><span>Раковины</span></a></li>
+            <li><a href="#">
+                <div class="sidebar__icon"><i class="sidebar_5"></i></div><span>Унтазы</span></a></li>
+            <li><a href="#">
+                <div class="sidebar__icon"><i class="sidebar_6"></i></div><span>Биде</span></a></li>
+            <li><a href="#">
+                <div class="sidebar__icon"><i class="sidebar_7"></i></div><span>Полотенцесушители</span></a></li>
+            <li><a href="#">
+                <div class="sidebar__icon"><i class="sidebar_8"></i></div><span>Аксессуары</span></a></li>
+            <li><a href="#">
+                <div class="sidebar__icon"><i class="sidebar_9"></i></div><span>Душевые кабины и углы</span></a></li>
+            <li><a href="#">
+                <div class="sidebar__icon"><i class="sidebar_10"></i></div><span>Сифоны</span></a></li>
+          </ul>
+        </div>
+        <div class="sidebar__banner"><img src="images/banner.png" alt=""></div>
+      </div>
+      <div class="site-body">
+        <div class="breadcrumb"><a href="#">Главная</a><span>Мебель для ванной</span></div>
+        <h1>Мебель для ванной</h1>
+        <form class="filter" action="">
+          <div class="filter__top">
+            <div class="filter__top-left">
+              <div class="filter__range-wrap">
+                <div class="filter__title">Цена</div>
+                <div class="filter__range">
+                  <div class="filter__range-left"><span>от</span>
+                    <input id="first_price" type="text" placeholder="4500">
+                  </div>
+                  <div class="filter__range-right"><span>до</span>
+                    <input id="last_price" type="text" placeholder="15500">
+                  </div><span class="rubl">o</span>
+                </div>
+                <div id="filter__price"></div>
+              </div>
+              <div class="filter__range-wrap">
+                <div class="filter__title">Высота</div>
+                <div class="filter__range">
+                  <div class="filter__range-left"><span>от</span>
+                    <input id="first_height" type="text" placeholder="70">
+                  </div>
+                  <div class="filter__range-right"><span>до</span>
+                    <input id="last_height" type="text" placeholder="80">
+                  </div><span>см</span>
+                </div>
+                <div id="filter__height"></div>
+              </div>
+              <div class="filter__range-wrap">
+                <div class="filter__title">Ширина</div>
+                <div class="filter__range">
+                  <div class="filter__range-left"><span>от</span>
+                    <input id="first_width" type="text" placeholder="50">
+                  </div>
+                  <div class="filter__range-right"><span>до</span>
+                    <input id="last_width" type="text" placeholder="52">
+                  </div><span>см</span>
+                </div>
+                <div id="filter__width"></div>
+              </div>
+              <div class="filter__range-wrap">
+                <div class="filter__title">Глубина</div>
+                <div class="filter__range">
+                  <div class="filter__range-left"><span>от</span>
+                    <input id="first_depth" type="text" placeholder="22">
+                  </div>
+                  <div class="filter__range-right"><span>до</span>
+                    <input id="last_depth" type="text" placeholder="26">
+                  </div><span>см</span>
+                </div>
+                <div id="filter__depth"></div>
+              </div>
+            </div>
+            <div class="filter__top-right">
+              <label class="control control--checkbox">
+                <div class="controlTitle">Акционные</div>
+                <input type="checkbox" />
+                <div class="control__indicator"></div>
+              </label>
+              <label class="control control--checkbox">
+                <div class="controlTitle">Рекомендуемые</div>
+                <input type="checkbox" />
+                <div class="control__indicator"></div>
+              </label>
+            </div>
+          </div>
+          <div class="filter__hide">
+            <div class="filter__hide-in">
+              <div class="filter__item">
+                <div class="filter__title">Производитель</div>
+                <div class="filter__item_in">
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Duravit</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Roca</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Vod-ok</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Аква Родос</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Duravit</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Vod-ok</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__title">Тип</div>
+                <div class="filter__item_in">
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Комплект мебели</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Колонка</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Комплект мебели</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Тумба с раковиной</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Колонка</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Зеркало</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__title">Коллекция</div>
+                <div class="filter__item_in">
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Комплект мебели</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Колонка</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Комплект мебели</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Тумба с раковиной</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Колонка</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Зеркало</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__title">Цвет корпуса</div>
+                <div class="filter__item_in">
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Комплект мебели</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Колонка</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Комплект мебели</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Тумба с раковиной</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Колонка</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Зеркало</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__title">Цвет фасада</div>
+                <div class="filter__item_in">
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Комплект мебели</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Колонка</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Комплект мебели</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Тумба с раковиной</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Колонка</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Зеркало</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__title">Форма раковины</div>
+                <div class="filter__item_in">
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Комплект мебели</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Колонка</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Комплект мебели</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Тумба с раковиной</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Колонка</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                  <label class="control control--checkbox">
+                    <div class="controlTitle">Зеркало</div>
+                    <input type="checkbox" />
+                    <div class="control__indicator"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__title">Корзина для белья</div>
+                <label class="control control--radio">Зеркало
+                  <input type="radio" name="trash" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Колонка
+                  <input type="radio" name="trash"/>
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+              <br />
+              <div class="filter__item">
+                <div class="filter__title">Угловая конструкция</div>
+                <label class="control control--radio">Зеркало
+                  <input type="radio" name="construction"/>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Колонка
+                  <input type="radio" name="construction"/>
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+              <br />
+              <div class="filter__item">
+                <div class="filter__title">Тип установки</div>
+                <label class="control control--radio">Зеркало
+                  <input type="radio" name="install"/>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Колонка
+                  <input type="radio" name="install"/>
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+              <div class="filter__item">
+                <div class="filter__title">Страна производитель</div>
+                <label class="control control--checkbox">
+                  <div class="controlTitle">Германия</div>
+                  <input type="checkbox" />
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <div class="controlTitle">Украина</div>
+                  <input type="checkbox" />
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <div class="controlTitle">Испания</div>
+                  <input type="checkbox" />
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <div class="controlTitle">Россия</div>
+                  <input type="checkbox" />
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="filter__hide-button"><span>
+              <q>Показать </q>фильтр<i class="hide_arrow"></i></span></div>
+          <div class="filter__bottom">
+            <div class="filter__bottom-left">
+              <div class="filter__title">Сортировка</div><a class="active_sort" href="#">по названию</a><a href="#">сначала дорогие</a><a href="#">сначала дешёвые</a>
+            </div>
+            <div class="filter__bottom-right">
+              <div class="filter__title">Показывать по:</div><a class="active_sort" href="#">24</a><a href="#">48</a><a href="#">96</a>
+            </div>
+          </div>
+        </form>
+        <div class="catalor">
+          <div class="catalor__item"><a class="catalog__link" href="#"><img src="images/catalog_1.jpg" alt="">
+              <div class="catalog__title">Зеркало Duravit DuraStyle 60 с Раковиной АкваТУР</div></a>
+            <div class="catalog__article">Артикул: <span>1A1659K2BL010</span></div>
+            <div class="catalog__store">
+              <div class="catalog__store-yes"><i class="store_yes"> </i><span>В наличии</span></div>
+            </div>
+            <div class="product__price">
+              <div class="product__price-amount">7 649<span>o</span></div>
+            </div>
+            <div class="catalog__buy">
+              <button class="catalog__compare"><i class="compare_active"></i><i class="compare_nonactive"></i></button>
+              <button class="btn-buy">Купить</button>
+            </div>
+          </div>
+          <div class="catalor__item"><a class="catalog__link" href="#"><img src="images/catalog_1.jpg" alt="">
+              <div class="catalog__title">Зеркало Duravit DuraStyle 60</div></a>
+            <div class="catalog__article">Артикул: <span>1A1659K2BL010</span></div>
+            <div class="catalog__store">
+              <div class="catalog__store-no"><i class="store_no"> </i><span>Временно нет в наличии</span></div>
+            </div>
+            <div class="product__price">
+              <div class="product__sale">9 800<span>o</span></div>
+              <div class="product__price-amount">7 649<span>o</span></div>
+            </div>
+            <div class="catalog__buy">
+              <button class="catalog__compare"><i class="compare_active"></i><i class="compare_nonactive"></i></button>
+              <button class="btn-buy">Купить</button>
+            </div>
+          </div>
+          <div class="catalor__item"><a class="catalog__link" href="#"><img src="images/catalog_1.jpg" alt="">
+              <div class="catalog__title">Зеркало Duravit DuraStyle 60</div></a>
+            <div class="catalog__article">Артикул: <span>1A1659K2BL010</span></div>
+            <div class="catalog__store">
+              <div class="catalog__store-yes"><i class="store_yes"> </i><span>В наличии</span></div>
+            </div>
+            <div class="product__price">
+              <div class="product__price-amount">7 649<span>o</span></div>
+            </div>
+            <div class="catalog__buy">
+              <button class="catalog__compare"><i class="compare_active"></i><i class="compare_nonactive"></i></button>
+              <button class="btn-buy">Купить</button>
+            </div>
+          </div>
+          <div class="catalor__item"><a class="catalog__link" href="#">
+            <div class="catalogStock">
+              <div class="catalogStockLeft"><div></div>Акция</div>
+              <div>-5 000 Р</div>
+            </div>
+            <img src="images/catalog_1.jpg" alt="">
+              <div class="catalog__title">Зеркало Duravit DuraStyle 60</div></a>
+            <div class="catalog__article">Артикул: <span>1A1659K2BL010</span></div>
+            <div class="catalog__store">
+              <div class="catalog__store-yes"><i class="store_yes"> </i><span>В наличии</span></div>
+            </div>
+            <div class="product__price">
+              <div class="product__sale">9 800<span>o</span></div>
+              <div class="product__price-amount">7 649<span>o</span></div>
+            </div>
+            <div class="catalog__buy">
+              <button class="catalog__compare"><i class="compare_active"></i><i class="compare_nonactive"></i></button>
+              <button class="btn-buy">Купить</button>
+            </div>
+          </div>
+          <div class="catalor__item"><a class="catalog__link" href="#"><img src="images/catalog_1.jpg" alt="">
+              <div class="catalog__title">Зеркало Duravit DuraStyle 60</div></a>
+            <div class="catalog__article">Артикул: <span>1A1659K2BL010</span></div>
+            <div class="catalog__store">
+              <div class="catalog__store-no"><i class="store_no"> </i><span>Временно нет в наличии</span></div>
+            </div>
+            <div class="product__price">
+              <div class="product__sale">9 800<span>o</span></div>
+              <div class="product__price-amount">7 649<span>o</span></div>
+            </div>
+            <div class="catalog__buy">
+              <button class="catalog__compare"><i class="compare_active"></i><i class="compare_nonactive"></i></button>
+              <button class="btn-buy">Купить</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__more">
+          <div class="catalog__more-in">Показать ещё 24 товара <span>из 15 000</span><i class="hide_arrow"></i></div>
+        </div>
+        <div class="pagination"></div>
+        <div class="catalog__text">
+          <div class="catalog__text-left"><img src="images/catalog_text.jpg" alt=""></div>
+          <div class="catalog__text-right">
+            <p>
+              Уверены, что вы хотите приобрести необычную мебель для ванной комнаты.<br> Практически вся сантехника выполнена в белом цвете, это классика, а вот дизайнерское исполнение – это то, что отличает данную мебель. Ведущие производители (России, Украины и европейские производителей) придумали для вас эксклюзивные модели. </p>
+            <p>В этой мебели для ванной идеально все: линии, формы, переходы, аксессуары. Изготовители позаботились не только о внешнем виде, но и комфортном использовании данных модулей. Обратите внимание на некоторые модели, представленные российскими производителями: отечественная мебель сегодня не уступает европейским образцам, а по некоторым характеристикам она лучше. Особенности привлекательна она по стоимости – вы можете купить полный комплект или отдельно зеркало, комод, шкафчик по привлекательной цене, на которую не сказываются курсы валют.</p>
+            <div class="filter__title">Мы предлагаем:</div>
+            <ul>
+              <li><i class="li_icon"></i>Cтильную мебель от лучших европейских и российских производителей</li>
+              <li><i class="li_icon"> </i>Интересный каталог, разнообразие навесных и напольных комплектов, а также отдельных элементов</li>
+              <li><i class="li_icon"> </i>Подбор мебели для ванной по конкретным параметрам</li>
+              <li><i class="li_icon"> </i>Влагостойкие, высококачественные и функциональные мебельные элементы</li>
+              <li><i class="li_icon"> </i>Выгодную стоимость на эксклюзивные тумбы с раковиной, зеркала и шкафчики</li>
+            </ul>
+            <p>Вы сможете подобрать для любой ванной комнаты подходящую мебель, которая устроит вас не только по внешним характеристикам, но и по вместительности, по функциональности.</p>
+            <p>Заказать понравившиеся образцы можно через «корзину», а также не забывайте, что эксперты SanVARO всегда готовы проконсультировать, помочь в выборе, а также подобрать мебель для ванной от производителя по заданной вами стоимости.</p>
+            <p>В ванной комнате будет уютно и комфортно, мы позаботимся о том, чтобы вы сделали правильную покупку!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer__in max_width">
+        <div class="footer__col">
+          <div class="footer__title">Интернет-магазин</div>
+          <ul>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Спецпредложения</a></li>
+            <li><a href="#">Гарантии</a></li>
+            <li><a href="#">Установка</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer_catalog">
+          <div class="footer__title">Каталог продукции</div>
+          <ul>
+            <li><a href="#">Мебель для ванной</a></li>
+            <li><a href="#">Полотенцесушители</a></li>
+            <li><a href="#">Ванны</a></li>
+            <li><a href="#">Аксессуары</a></li>
+            <li><a href="#">Смесители</a></li>
+            <li><a href="#">Душевые кабины и углы</a></li>
+            <li><a href="#">Раковины</a></li>
+            <li><a href="#">Сифоны</a></li>
+            <li><a href="#">Унитазы</a></li>
+            <li><a href="#">Биде</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <div class="footer__title">Способы оплаты</div>
+          <div class="footer__pay"><img src="images/visa.png" alt=""><br><img src="images/master.png" alt=""><img src="images/sber.png" alt=""></div>
+        </div>
+        <div class="footer__col footer_work">
+          <div class="footer__title">Часы работы</div><span>Пн-Пт: 09.00 - 20.00</span><span>Сб: 10.00 - 20.00</span><span>Вскр: выходной</span>
+        </div>
+        <div class="footer__col">
+          <div class="footer__title">Контакты</div>
+          <div class="footer__phone-wrap">
+            <div class="footer__phone-icon"><i class="phone"></i></div>
+            <div class="footer__phone"><a href="tel:74952155789">+7 (495) 215-57-89</a><a href="tel:79163489482">+7 (916) 348-94-82</a></div>
+          </div>
+          <div class="footer__email"><i class="email"></i><a href="mailto:info@sanvaro.ru">info@sanvaro.ru</a></div>
+        </div>
+      </div>
+      <div class="coperit"> <span>Copyright ©2010 - 2018 Sanvaro</span></div>
+    </footer><a class="to-top" href="#"><i class="to_top"></i></a>
+
+  </body>
+</html>
