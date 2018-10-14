@@ -92,6 +92,18 @@ module.exports = {
       inject: true,
       filename: 'trash.html'
     }),
+    new HtmlWebpackPlugin({
+        title: 'CONTACT.HTML',
+        template: './good/contact.html',
+        inject: true,
+        filename: 'contact.html'
+    }),
+    new HtmlWebpackPlugin({
+        title: 'CART.HTML',
+        template: './good/cart.html',
+        inject: true,
+        filename: 'cart.html'
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([
           {from: './good/images', to: 'img'},

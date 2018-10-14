@@ -7,13 +7,40 @@
       margin-right: 40px
       &:nth-child(2n)
         margin-right: 0
-@media only screen and (max-width: 1368px)
+@media only screen and (max-width: 1366px)
+  .trashProductAmount
+    width: 20.5%
+  .trashProductDelete
+    width: 5%
+  .trashFromWayBodyTitle
+    max-height: 107px
+    align-items: flex-start
+    font-size: 16px
+    label
+      width: 100%
+      padding-left: 0
+      padding-top: 30px
+      .control__indicator
+        left: 50%
+        top: 0 !important
+        transform: translateX(-50%) !important
   .trashFormWay
     .trashFormContainer
-      //flex-wrap: wrap
-      //> div
-      //  width: calc(50% - 30px)
-      //  margin-bottom: 50px
+      > div
+        width: 50%
+  .trashProductNameTitle
+    font-size: 18px
+  .contactContainer
+    flex-direction: column
+    div
+      .contactContainerOne
+        margin-right: 0
+        box-sizing: border-box
+        max-width: 500px
+        width: 100%
+        > div
+          box-sizing: border-box
+          max-width: 450px
 @media only screen and (max-width: 1200px)
   .trashFormCont
     flex-direction: column
@@ -23,12 +50,106 @@
       max-width: 540px
       width: 100%
       margin-right: 0
+  .trashBobyListHeader
+    .trashProductDelete
+      width: 5% !important
 @media only screen and (max-width: 998px)
+  .trashProduct
+    display: flex
+    flex-direction: column
+    > div
+      width: 100% !important
+      &:first-child
+        margin-bottom: 30px
+      .trashProductName
+        padding-right: 0
+    .lastProductBlock
+     .trashProductAmount
+       margin-bottom: 0 !important
+  .trashBobyListHeader
+    display: none
+  .trashFormWay
+    .trashFormContainer
+      flex-wrap: wrap
+      > div
+        flex-basis: calc(50% - 30px)
+        display: flex
+        margin-bottom: 40px
+        align-items: stretch
+        flex-direction: column
+        justify-content: flex-start
+        label
+          justify-content: center
+  .trashFromWayBodyTitle
+    align-items: flex-end
+  .trashFormPay
+    .trashFormContainer
+      flex-direction: column
+      align-items: center
+      margin: 0 auto
+      > div
+        width: 100%
+        margin-bottom: 30px
+        flex-direction: row
+        flex-wrap: nowrap
+        justify-content: space-between
+        .trashFromWayBodyTitle
+          &:last-child
+            margin-right: 0
+      .formPayText
+        font-size: 14px
   .catalor
     margin: 0 -15px
   .catalor__item
     flex-basis: auto
     width: calc(50% - 30px)
+  .trashBodyContainer, .contactBodyContainer
+    padding: 0 15px
+  .contactContainer
+    font-size: 16px
+    input
+      font-size: 16px !important
+    > div
+      align-items: center
+      flex-direction: column
+  .contactContainerOne
+    margin: 15px 0
+    .trashFormNameTitle
+      display: block
+      text-align: center
+    > div
+      max-width: 500px !important
+  .contactContainerTime
+    margin: 15px 0
+    max-width: 500px
+    width: 100%
+    margin-right: 0 !important
+    > div
+      display: flex
+      justify-content: space-between
+    &Tilte
+      padding-left: 40px
+  .contactContainerForm
+    margin-top: 15px
+    max-width: 500px
+    width: 100%
+    margin: 0 auto
+  .contactContainerFormBody
+    flex-direction: column
+    align-items: center
+    > div
+      margin: 15px 0
+      &:first-child
+        margin-top: 0
+    .inputGroup
+      input
+        max-width: 100%
+        margin-right: 0 !important
+  .contactContainerTimeTilte
+    width: 105px
+    margin: 0 auto
+  .trashFormNameTitle
+    text-align: center
 @media only screen and (max-width: 615px)
   .trashFormCont
     font-size: 16px
@@ -45,6 +166,34 @@
       &:first-child
         margin-right: 20px !important
 @media only screen and (max-width: 568px)
+  .formPayText
+    width: 100% !important
+    margin: 0 !important
+  .trashFormWay
+    .trashFormContainer
+      flex-wrap: wrap
+      > div
+        flex-basis: calc(50% - 15px)
+        .trashFromWayBodyTitle
+          font-size: 14px !important
+          .text
+            span
+              font-size: 14px
+  .trashFormPay
+    margin-bottom: 40px
+    .trashFormContainer
+      flex-direction: column
+      align-items: center
+      margin: 0 auto
+      > div
+        .trashFromWayBodyTitle
+          margin-right: 15px
+  .trashFormNameTitle
+    text-align: center
+  .trashFromWayBodyPrice
+    font-size: 20px
+    span
+      font-size: 14px !important
   .catalor
     font-size: 15px
     justify-content: flex-start
@@ -73,12 +222,28 @@
     border-radius: 0
     height: 30px
     width: 100%
+    margin-bottom: 10px !important
     > div
       padding: 7px 5px
       font-size: 14px
   .catalogStockLeft
     max-width: 50%
     min-width: auto
+  .trashProductPrice
+    .catalogStockLeft
+      &:after
+        left: -12px
+        width: 20px
+        height: 20px
+  .lastProductBlock
+    flex-wrap: wrap
+    justify-content: center
+    > div
+      margin-bottom: 20px
+    .trashProductDelete
+      margin-right: 5px
+  .product__price-amount
+    font-size: 20px
   .to-top
     right: 30px
     .to_top
@@ -117,6 +282,14 @@
       .control__indicator
         top: 50%
         transform: translateY(-50%)
-  .trashBodyContainer
-    padding: 0 15px
-
+  .finishPrice
+    margin: 25px 0 !important
+  .finishPriceButtons
+    margin: 0 auto
+    flex-direction: column
+    a
+      margin: 0 0 15px 0
+  .trashProduct
+    .lastProductBlock
+      .trashProductAmount
+        margin-bottom: 20px !important
